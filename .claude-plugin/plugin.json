@@ -1,6 +1,6 @@
 {
   "name": "budget-governor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap",
   "types": "./types/index.d.ts",
   "author": {
