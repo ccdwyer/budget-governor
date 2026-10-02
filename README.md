@@ -58,6 +58,14 @@ Engine calls it makes: `$.clock.after`, `$.clock.every (via setUp)`, `$.clock.no
 
 A `tool.call` hook sits in the middle of every tool call: it can see the call, refuse it, or add context to its result. This mod uses that only for the behaviour described above.
 
+## Privacy
+
+It runs entirely on your machine. It sends nothing over the network. It reads the session's cost from Claude Code and keeps a daily ledger in Claude Code's local plugin store.
+
+The mod collects no analytics or telemetry, and its author receives no data from it.
+
+Full policy: [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT
