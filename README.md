@@ -1,5 +1,9 @@
 # Budget Governor
 
+![Budget Governor demo: the gauge turns yellow past 80%, then the next prompt is refused at the cap until /budget raise](media/demo.gif)
+
+[Full-quality video](media/demo.mp4)
+
 A Claude Code mod that enforces spending caps instead of just showing them.
 
 - **Gauge above the prompt.** When a cap is set, it shows a fill bar, `$3.20 / $10 today · $1.10 / $5 session`, the burn rate in $/hr over the last hour of turns, and a sparkline of what each recent turn cost.
