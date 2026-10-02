@@ -1,0 +1,13 @@
+{
+  "name": "budget-governor",
+  "owner": {
+    "name": "Chris Dwyer"
+  },
+  "plugins": [
+    {
+      "name": "budget-governor",
+      "source": "./",
+      "description": "Enforces session and daily spend caps: a live gauge above the prompt, a wrap-up nudge at 80%, and new prompts refused at the cap"
+    }
+  ]
+}
