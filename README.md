@@ -2,7 +2,7 @@
 
 ![Budget Governor demo: the gauge turns yellow past 80%, then the next prompt is refused at the cap until /budget raise](media/demo.gif)
 
-[Full-quality video](media/demo.mp4)
+[Full-quality video](https://github.com/ccdwyer/claude-mods/raw/main/media/budget-governor.mp4)
 
 A Claude Code mod that enforces spending caps instead of just showing them.
 
@@ -40,3 +40,24 @@ Caps are saved and carry over to later sessions. Costs are what Claude Code's `/
 claude plugin validate .
 claude plugin test .
 ```
+
+## What it hooks
+
+Events this mod hooks, as `claude plugin validate` reads the module:
+
+- `session.start`
+- `session.end`
+- `command.run{command=budget}`
+- `turn.start`
+- `turn.complete`
+- `prompt.submit`
+- `tool.call`
+- `ui.render{component=AbovePrompt}`
+
+Engine calls it makes: `$.clock.after`, `$.clock.every (via setUp)`, `$.clock.now`, `$.clock.sleep`, `$.command.list (via isCommand)`, `$.command.register (via setUp)`, `$.session.id (via refresh`, `settled)`, `$.session.usage (via refresh`, `settled)`, `$.state.get`, `$.state.set`, `$.store.delete`, `$.store.get`, `$.store.keys`, `$.store.set (via refresh`, `setCap)`, `$.turn.abort`, `$.ui.resolve`, `$.ui.toast`.
+
+A `tool.call` hook sits in the middle of every tool call: it can see the call, refuse it, or add context to its result. This mod uses that only for the behaviour described above.
+
+## License
+
+MIT

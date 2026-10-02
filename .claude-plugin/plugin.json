@@ -7,5 +7,6 @@
     "name": "Chris Dwyer",
     "url": "https://github.com/ccdwyer"
   },
-  "repository": "https://github.com/ccdwyer/budget-governor"
+  "repository": "https://github.com/ccdwyer/budget-governor",
+  "license": "MIT"
 }
