@@ -8,5 +8,9 @@
     "url": "https://github.com/ccdwyer"
   },
   "repository": "https://github.com/ccdwyer/budget-governor",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/ccdwyer/budget-governor",
+  "supportUrl": "https://github.com/ccdwyer/budget-governor/issues",
+  "documentationUrl": "https://github.com/ccdwyer/budget-governor#readme",
+  "privacyPolicyUrl": "https://github.com/ccdwyer/budget-governor/blob/main/PRIVACY.md"
 }
